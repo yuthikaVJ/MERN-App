@@ -7,10 +7,11 @@ const host = 'localhost';
 const mongoose = require('mongoose');
 const router = require('./router');
 
+
 app.use(cors());
 app.use(express.json());
 
-const uri = 'mongodb+srv://admin:12345@cluster0.c1o0hq2.mongodb.net/?appName=Cluster0'
+const uri = "mongodb+srv://admin:12345@cluster0.c1o0hq2.mongodb.net/?appName=Cluster0"
 
 const connect = async () => {
     try {
