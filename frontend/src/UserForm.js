@@ -1,6 +1,10 @@
 import { Button, Grid, Input, Typography } from '@mui/material';
+import {  useState } from 'react';
 
 const UserForm = props => {
+
+    const [id, setId] = useState('')
+    const [name, setName] = useState('')
     return (
         <Grid
             container
@@ -33,15 +37,15 @@ const UserForm = props => {
                     id='id'
                     name='id'
                     sx={{ width: '400px' }}
-                    value={''}
-                    onChange={e => { }}
+                    value={id}
+                    onChange={e => setId(e.target.value)}
                 />
             </Grid>
 
             <Grid item xs={12} sm={6} sx={{ display: 'flex' }}>
                 <Typography
                     component={'label'}
-                    htmlFor='id'
+                    htmlFor='name'
                     sx={{
                         color: '#000000',
                         marginRight: '20px',
@@ -57,8 +61,8 @@ const UserForm = props => {
                     id='name'
                     name='name'
                     sx={{ width: '400px' }}
-                    value={''}
-                    onChange={e => { }}
+                    value={name}
+                    onChange={e => setName(e.target.value)}
                 />
             </Grid>
             <Button
