@@ -1,4 +1,4 @@
-import { Grid, Input, Typography } from '@mui/material';
+import { Button, Grid, Input, Typography } from '@mui/material';
 
 const UserForm = props => {
     return (
@@ -50,17 +50,33 @@ const UserForm = props => {
                         display: 'block'
                     }}
                 >
-                    ID
+                    Name
                 </Typography>
                 <Input
-                    type='number'
-                    id='id'
-                    name='id'
+                    type='text'
+                    id='name'
+                    name='name'
                     sx={{ width: '400px' }}
                     value={''}
                     onChange={e => { }}
                 />
             </Grid>
+            <Button
+                sx={{
+                    margin: 'auto',
+                    marginBottom: '20px',
+                    backgroundColor: '#00c6e6',
+                    color: '#000000',
+                    marginLeft: '15px',
+                    marginTop: '20px',
+                    '&:hover': {
+                        backgroundColor: '#00c6e6',
+                        opacity: 0.7
+                    }
+                }}
+            >
+                Add
+            </Button>
 
         </Grid>
 
