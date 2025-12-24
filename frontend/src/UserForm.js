@@ -3,7 +3,7 @@ import {  useState } from 'react';
 
 const UserForm = props => {
 
-    const [id, setId] = useState('')
+    const [id, setId] = useState(0)
     const [name, setName] = useState('')
     return (
         <Grid
