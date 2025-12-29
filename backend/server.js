@@ -1,11 +1,11 @@
-
+require('dotenv').config();
 const express = require('express');
 const app = express();
 const cors = require('cors');
 
 
 const port = 5000;
-const host = process.env.ADRESS;
+const host = 'localhost';
 const mongoose = require('mongoose');
 const router = require('./router');
 
@@ -14,8 +14,7 @@ const router = require('./router');
 app.use(cors());
 app.use(express.json());
 
-const uri =  "mongodb+srv://admin:12345@cluster0.c1o0hq2.mongodb.net/?appName=Cluster0"
-
+const uri = process.env.MONGO_URL;
 const connect = async () => {
     try {
         await mongoose.connect(uri);
